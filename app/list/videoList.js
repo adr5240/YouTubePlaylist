@@ -27,6 +27,10 @@ angular.module('videos', [
 
     })
     .controller('VideosListCtrl', function VideosCtrl(VideosModel) {
-
+        let videosListCtrl = this;
+        VideosModel.getVideos()
+            .then(function(result) {
+                videosListCtrl.videos = result;
+            });
     })
 ;
