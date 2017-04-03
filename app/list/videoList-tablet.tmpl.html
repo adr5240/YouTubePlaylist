@@ -1,20 +1,20 @@
-<ui-view ng-show="videosListCtrl.checkListView()" class="videoList-tablet">
-    <h2 class="listTitle">My YouTube Playlist</h2>
+<h2 class="listTitle">My YouTube Playlist</h2>
 
-    <ul class="videoList">
-        <li class="videoListItem" ng-repeat="video in videosListCtrl.videos">
-            <img ui-sref="youtube.videos.details({ videoId:video.contentDetails.videoId })" class="videoThumb"
-                 ng-click="videosListCtrl.toggleListView()"
-                 src="{{video.snippet.thumbnails.high.url}}"
-                 alt="{{ video.snippet.thumbnails.default.url }}">
+<ul class="videoList">
+    <li class="videoListItem" ng-repeat="video in videosListCtrl.videos">
+        <img ui-sref="youtube.videos.details({ videoId:video.contentDetails.videoId })" class="videoThumb"
+             ng-click="videosListCtrl.toggleListView()"
+             ng-src="{{ video.snippet.thumbnails.high.url }}"
+             alt="{{ video.snippet.thumbnails.default.url }}">
 
+        <div class="videoListInfo">
             <h4 ui-sref="youtube.videos.details({ videoId:video.contentDetails.videoId })"
                 class="videoTitle">{{ video.snippet.title }}</h4>
             <br/>
             <h6 class="videoPublished">Published on {{ video.snippet.publishedAt | date }}</h6>
             <br/>
-            <h6 class="videoDescription">{{ video.snippet.description | limitTo: 100 }}...</h6>
-            <br/>
-        </li>
-    </ul>
-</ui-view>
+            <h6 class="videoDescription">{{ video.snippet.description | limitTo: 160 }}...</h6>
+        </div>
+        <br/>
+    </li>
+</ul>

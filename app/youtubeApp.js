@@ -1,4 +1,5 @@
 angular.module('Youtube', [
+    'ngAnimate',
     'ui.router',
     'videos',
     'videos.details'

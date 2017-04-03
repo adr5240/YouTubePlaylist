@@ -33,10 +33,10 @@ angular.module('videos', [
                 videosListCtrl.videos = result;
             });
 
-        function listView() {
+        function checkListView() {
             return $state.current.name === 'youtube.videos';
         }
 
-        videosListCtrl.checkListView = listView;
+        videosListCtrl.checkListView = checkListView;
     })
 ;
