@@ -1,3 +1,18 @@
-<div class="videoDetail-tablet">
-    <h4>Hello from videoDetail</h4>
-</div>
+<ui-view ng-show="detailsCtrl.video" class="videoDetail-tablet">
+    <button type="button" ng-click="detailsCtrl.returnToVideos()">Return to List of Videos</button>
+
+    <ul class="videoList">
+        <li class="videoItem">
+            <img class="videoThumb"
+                 src="{{ detailsCtrl.video.snippet.thumbnails.high.url }}"
+                 alt="{{ detailsCtrl.video.snippet.thumbnails.default.url }}">
+
+            <h4 class="videoTitle">{{ detailsCtrl.video.snippet.title }}</h4>
+            <br/>
+            <h6 class="videoPublished">Published on {{ detailsCtrl.video.snippet.publishedAt | date }}</h6>
+            <br/>
+            <h6 class="videoDescription">{{ detailsCtrl.video.snippet.description }}</h6>
+            <br/>
+        </li>
+    </ul>
+</ui-view>

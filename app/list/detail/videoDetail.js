@@ -18,7 +18,23 @@ angular.module('videos.details', [
             });
 
     })
-    .controller('DetailsCtrl', function DetailsCtrl(DetailsModel) {
+    .controller('DetailsCtrl', function DetailsCtrl($state, $stateParams, DetailsModel, VideosModel) {
+        let detailsCtrl = this,
+            video;
 
+        DetailsModel.getVideo(video)
+            .then(function(result) {
+                detailsCtrl.video = result;
+            });
+
+        function returnToVideos() {
+            VideosModel.toggleListView();
+
+            $state.go('youtube.videos', {
+
+            });
+        }
+
+        detailsCtrl.returnToVideos = returnToVideos;
     })
 ;

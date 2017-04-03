@@ -26,11 +26,14 @@ angular.module('videos', [
             });
 
     })
-    .controller('VideosListCtrl', function VideosCtrl(VideosModel) {
+    .controller('VideosListCtrl', function VideosCtrl($state, $stateParams, VideosModel) {
         let videosListCtrl = this;
         VideosModel.getVideos()
             .then(function(result) {
                 videosListCtrl.videos = result;
             });
+
+        videosListCtrl.toggleListView = VideosModel.toggleListView;
+        videosListCtrl.checkListView = VideosModel.checkListView;
     })
 ;
