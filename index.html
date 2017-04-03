@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="Youtube">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
@@ -8,10 +8,10 @@
     <body>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-sm-3 col-md-2 sidebar" ui-view="categories">
+                <div class="col-sm-3 col-md-2 sidebar" ui-view="videos-tablet">
 
                 </div>
-                <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ui-view="bookmarks">
+                <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ui-view="details-tablet">
 
                 </div>
             </div>
@@ -24,5 +24,8 @@
         <script src="vendor/angular-ui-router.min.js"></script>
 
         <script src="app/youtubeApp.js"></script>
+        <script src="app/list/videoList.js"></script>
+        <script src="app/list/detail/videoDetail.js"></script>
+        <script src="app/models/video-model.js"></script>
     </body>
 </html>
