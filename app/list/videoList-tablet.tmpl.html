@@ -5,7 +5,7 @@
         <li class="videoListItem" ng-repeat="video in videosListCtrl.videos">
             <img ui-sref="youtube.videos.details({ videoId:video.contentDetails.videoId })" class="videoThumb"
                  ng-click="videosListCtrl.toggleListView()"
-                 src="{{ video.snippet.thumbnails.high.url }}"
+                 src="{{video.snippet.thumbnails.high.url}}"
                  alt="{{ video.snippet.thumbnails.default.url }}">
 
             <h4 ui-sref="youtube.videos.details({ videoId:video.contentDetails.videoId })"

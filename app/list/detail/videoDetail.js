@@ -28,8 +28,8 @@ angular.module('videos.details', [
             });
 
         function returnToVideos() {
-            VideosModel.toggleListView();
-
+            detailsCtrl.video = undefined;
+            
             $state.go('youtube.videos', {
 
             });

@@ -6,9 +6,7 @@ angular.module('youtube.models.videos', [
             URLS = {
                 FETCH: 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet,contentDetails,status&maxResults=10&playlistId=PLSi28iDfECJPJYFA4wjlF5KUucFvc0qbQ&key=AIzaSyCuv_16onZRx3qHDStC-FUp__A6si-fStw'
             },
-            videos,
-            currentVideo,
-            listView = true;
+            videos;
 
         function cacheVideos(result) {
             videos = extract(result);
@@ -19,16 +17,8 @@ angular.module('youtube.models.videos', [
             return result.data.items;
         }
 
-        model.checkListView = function () {
-            return listView;
-        };
-
         model.getVideos = function () {
             return (videos) ? $q.when(categories) : $http.get(URLS.FETCH).then(cacheVideos);
-        };
-
-        model.toggleListView = function () {
-            listView = !listView;
         };
     })
 ;
