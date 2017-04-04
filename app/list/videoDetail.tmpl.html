@@ -3,13 +3,13 @@
 
     <ul class="videoList">
         <li class="videoListItem videoDetail">
-            <iframe ng-if="detailsCtrl.video" id="player" class="videoThumb"
-                    type="text/html"
-                    src="{{ detailsCtrl.trustSrc(detailsCtrl.video.url) }}"
-                    allowfullscreen>
-            </iframe>
-
-            <div id="player"></div>
+            <div id="player">
+                <iframe ng-if="detailsCtrl.video" id="player" class="videoThumb"
+                        type="text/html"
+                        src="{{ detailsCtrl.trustSrc(detailsCtrl.video.url) }}"
+                        allowfullscreen>
+                </iframe>
+            </div>
 
             <div class="videoListInfo videoDetailInfo">
                 <h4 class="videoTitle">{{ detailsCtrl.video.snippet.title }}</h4>
