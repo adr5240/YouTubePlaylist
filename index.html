@@ -10,16 +10,11 @@
         <link rel="stylesheet" href="assets/css/youtube.css">
         <link rel="stylesheet" href="assets/css/animation.css">
 
-        <title>My Playlist</title>
+        <title>My Video Playlist</title>
     </head>
     <body>
-        <div ui-view="videos-tablet" ng-show="videosListCtrl.checkListView()">
-
-        </div>
-        <div ui-view="details-tablet" ng-show="detailsCtrl.video">
-
-        </div>
-
+        <div ui-view="videos-tablet" ng-show="videosListCtrl.checkListView()"></div>
+        <div ui-view="details-tablet" ng-show="detailsCtrl.video"></div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>

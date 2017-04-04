@@ -16,9 +16,8 @@ angular.module('videos.details', [
                     }
                 }
             });
-
     })
-    .controller('DetailsCtrl', function DetailsCtrl($state, $stateParams, DetailsModel, VideosModel) {
+    .controller('DetailsCtrl', function DetailsCtrl($state, $stateParams, DetailsModel) {
         let detailsCtrl = this,
             video;
 
@@ -29,7 +28,7 @@ angular.module('videos.details', [
 
         function returnToVideos() {
             detailsCtrl.video = undefined;
-            
+
             $state.go('youtube.videos', {
 
             });
