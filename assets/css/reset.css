@@ -33,31 +33,47 @@ li {
     list-style-type: none;
 }
 
+/*-----------------------------------------------------*/
+/* App CSS */
+/*-----------------------------------------------------*/
+
+
 html,
 body {
     background-color: #f1f1f1;
     width: 100%;
     height: 100%;
-    color: #4F534E;
-    /*background-image: url("../img/backround.png");*/
+    color: #000;
+}
+
+a {
+    color: #373A36;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #5bc0de;
 }
 
 b {
     font-weight: bold;
 }
 
-h4.videoTitle {
-    cursor: pointer;
-    font-size: 22pt;
-    text-decoration: underline;
-}
-
-h4.videoTitle:hover {
-    color: blue;
+button.back {
+    word-wrap: normal;
+    background: #f1f1f1;
+    color: #7d7d7d;
+    border-radius: 10px;
+    margin: 10px;
 }
 
 div.container {
     width: 100%;
+}
+
+div.footer {
+    height: 20px;
 }
 
 h2.listTitle {
@@ -67,4 +83,35 @@ h2.listTitle {
     padding: 20px;
     color: #000;
     font-family: cursive;
+}
+
+h4.videoTitle {
+    font-size: 22pt;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+h4.videoTitleLink {
+    cursor: pointer;
+}
+
+h4.videoTitleLink:hover {
+    color: #167ac6;
+}
+
+img.videoThumb {
+    cursor: pointer;
+}
+
+li {
+    padding: 10px;
+    border: 2px solid black;
+    border-bottom-width: 0.5px;
+    border-radius: 10px;
+    margin: 0 0 10px 0;
+}
+
+li.videoListItem {
+    background: #fff;
+    margin: 10px auto;
 }

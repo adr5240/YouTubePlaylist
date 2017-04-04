@@ -1,0 +1,16 @@
+div.videoDetailInfo {
+    width: 80%;
+}
+
+div.videoListInfo {
+    display: block;
+    margin: 10px auto;
+}
+
+img.videoThumb {
+    display: block;
+}
+
+li.videoListItem {
+    width: 90%;
+}
