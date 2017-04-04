@@ -1,7 +1,7 @@
 angular.module('youtube.models.details', [
 
 ])
-    .service('DetailsModel', function ($http, $q, $stateParams) {
+    .service('DetailsModel', function ($http, $q, $stateParams, $sce) {
         let model = this,
             URLS = {
                 FETCH: 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet,contentDetails,status&maxResults=10&playlistId=PLSi28iDfECJPJYFA4wjlF5KUucFvc0qbQ&key=AIzaSyCuv_16onZRx3qHDStC-FUp__A6si-fStw'
@@ -63,6 +63,10 @@ angular.module('youtube.models.details', [
 
         model.getVideo = function () {
             return (currentVideo) ? $q.when(currentVideo) : getVideoById($stateParams.videoId);
+        };
+
+        model.trustSrc = function(src) {
+            return $sce.trustAsResourceUrl(src);
         };
 
         this.getAllVideos();

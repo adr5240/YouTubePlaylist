@@ -52,6 +52,9 @@ angular.module('videos', [
         DetailsModel.getVideo(video)
             .then(function(result) {
                 detailsCtrl.video = result;
+                if(detailsCtrl.video) {
+                    detailsCtrl.video.url = "https://www.youtube.com/embed/" + result.contentDetails.videoId;
+                }
             });
 
         function checkListView() {
@@ -68,5 +71,6 @@ angular.module('videos', [
 
         detailsCtrl.checkListView = checkListView;
         detailsCtrl.returnToVideos = returnToVideos;
+        detailsCtrl.trustSrc = DetailsModel.trustSrc;
     })
 ;
