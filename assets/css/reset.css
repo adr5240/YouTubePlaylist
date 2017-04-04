@@ -22,6 +22,7 @@ time, mark, audio, video {
     vertical-align:baseline;
     background:transparent;
     font-family: sans-serif;
+    font-weight: 400;
 }
 
 nav ul {
@@ -34,18 +35,36 @@ li {
 
 html,
 body {
-    background-color: #D5DBD8;
+    background-color: #f1f1f1;
     width: 100%;
     height: 100%;
     color: #4F534E;
-    background-image: url("../img/backround.png");
+    /*background-image: url("../img/backround.png");*/
 }
 
+b {
+    font-weight: bold;
+}
 
 h4.videoTitle {
     cursor: pointer;
+    font-size: 22pt;
+    text-decoration: underline;
+}
+
+h4.videoTitle:hover {
+    color: blue;
 }
 
 div.container {
     width: 100%;
+}
+
+h2.listTitle {
+    font-size: 36pt;
+    text-align: center;
+    font-weight: 700;
+    padding: 20px;
+    color: #000;
+    font-family: cursive;
 }

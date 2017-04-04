@@ -13,9 +13,9 @@
         <div class="videoListInfo videoDetailInfo">
             <h4 class="videoTitle">{{ detailsCtrl.video.snippet.title }}</h4>
             <br/>
-            <h6 class="videoPublished">Published on {{ detailsCtrl.video.snippet.publishedAt | date }}</h6>
+            <h6 class="videoPublished"><b>Published</b> on {{ detailsCtrl.video.snippet.publishedAt | date }}</h6>
             <br/>
-            <h6 class="videoDescription">{{ detailsCtrl.video.snippet.description }}</h6>
+            <h6 class="videoDescription" ng-if="detailsCtrl.video.snippet.description"><b>Description:<b> {{ detailsCtrl.video.snippet.description }}</h6>
             <br/>
         </div>
     </li>

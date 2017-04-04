@@ -11,17 +11,12 @@ li {
 }
 
 h2.listTitle {
-    font-size: 16pt;
-    text-align: center;
-    font-weight: 700;
-    padding: 20px;
-    color: #e62117;
-    text-shadow: 2px 2px 2px #000;
+    font-size: 18pt;
 }
 
 li.videoListItem {
     display: block;
-    background: antiquewhite;
+    background: #fff;
     width: 90%;
     margin: auto;
     margin-bottom: 20px;
@@ -40,7 +35,7 @@ div.videoDetailInfo {
 button.back {
     word-wrap: normal;
     margin: 10px;
-    background: antiquewhite;
+    background: #f1f1f1;
     color: #7d7d7d;
     border-radius: 10px;
 }

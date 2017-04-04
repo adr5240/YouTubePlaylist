@@ -18,8 +18,8 @@
     </head>
     <body>
         <div class="container">
-            <div ui-view="videosView" ng-show="detailsCtrl.checkListView()"></div>
-            <div ui-view="detailsView" ng-show="detailsCtrl.video"></div>
+            <div class="videosView" ui-view="videosView" ng-show="detailsCtrl.checkListView()"></div>
+            <div class="detailsView" ui-view="detailsView" ng-show="detailsCtrl.video"></div>
         </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

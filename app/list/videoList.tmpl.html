@@ -11,9 +11,9 @@
             <h4 ui-sref="youtube.videos.details({ videoId:video.contentDetails.videoId })"
                 class="videoTitle">{{ video.snippet.title }}</h4>
             <br/>
-            <h6 class="videoPublished">Published on {{ video.snippet.publishedAt | date }}</h6>
+            <h6 class="videoPublished"><b>Published on</b> {{ video.snippet.publishedAt | date }}</h6>
             <br/>
-            <h6 class="videoDescription">{{ video.snippet.description | limitTo: 160 }}...</h6>
+            <h6 class="videoDescription" ng-if="video.snippet.description"><b>Description:</b> {{ video.snippet.description | limitTo: 160 }}...</h6>
         </div>
     </li>
 </ul>
