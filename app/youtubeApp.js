@@ -1,8 +1,7 @@
 angular.module('Youtube', [
     'ngAnimate',
     'ui.router',
-    'videos',
-    'videos.details'
+    'videos'
 ])
 
     .config(function($stateProvider, $urlRouterProvider) {

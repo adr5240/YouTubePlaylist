@@ -13,7 +13,7 @@
         <title>My Video Playlist</title>
     </head>
     <body>
-        <div ui-view="videos-tablet" ng-show="videosListCtrl.checkListView()"></div>
+        <div ui-view="videos-tablet" ng-show="detailsCtrl.checkListView()"></div>
         <div ui-view="details-tablet" ng-show="detailsCtrl.video"></div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -24,8 +24,7 @@
 
         <script src="app/youtubeApp.js"></script>
         <script src="app/list/videoList.js"></script>
-        <script src="app/list/detail/videoDetail.js"></script>
-        <script src="app/models/video-model.js"></script>
+        <script src="app/list/videoList.js"></script>
         <script src="app/models/detail-model.js"></script>
     </body>
 </html>

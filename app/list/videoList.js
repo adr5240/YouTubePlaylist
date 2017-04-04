@@ -1,42 +1,72 @@
 angular.module('videos', [
-    'youtube.models.videos'
+    'youtube.models.details'
 ])
     .config(function($stateProvider) {
         $stateProvider
             .state('youtube.videos', {
                 url: '/',
                 views: {
-                    'videos-tablet@': {
-                        controller: 'VideosListCtrl as videosListCtrl',
-                        templateUrl: 'app/list/videoList-tablet.tmpl.html'
-                    },
-                    'videos-mobile@': {
-                        controller: 'VideosListCtrl as videosListCtrl',
-                        templateUrl: 'app/list/videoList-mobile.tmpl.html'
-                    },
                     'details-tablet@': {
                         controller: 'DetailsCtrl as detailsCtrl',
-                        templateUrl: 'app/list/detail/videoDetail-tablet.tmpl.html'
+                        templateUrl: 'app/list/videoDetail-tablet.tmpl.html'
                     },
                     'details-mobile@': {
                         controller: 'DetailsCtrl as detailsCtrl',
-                        templateUrl: 'app/list/detail/videoDetail-mobile.tmpl.html'
+                        templateUrl: 'app/list/videoDetail-mobile.tmpl.html'
+                    },
+                    'videos-mobile@': {
+                        controller: 'DetailsCtrl as detailsCtrl',
+                        templateUrl: 'app/list/videoList-mobile.tmpl.html'
+                    },
+                    'videos-tablet@': {
+                        controller: 'DetailsCtrl as detailsCtrl',
+                        templateUrl: 'app/list/videoList-tablet.tmpl.html'
+                    }
+                }
+            });
+        $stateProvider
+            .state('youtube.videos.details', {
+                url: 'videos/:videoId/details',
+                views: {
+                    'details-mobile@': {
+                        controller: 'DetailsCtrl as detailsCtrl',
+                        templateUrl: 'app/list/videoDetail-mobile.tmpl.html'
+                    },
+                    'details-tablet@': {
+                        controller: 'DetailsCtrl as detailsCtrl',
+                        templateUrl: 'app/list/videoDetail-tablet.tmpl.html'
                     }
                 }
             });
 
     })
-    .controller('VideosListCtrl', function VideosCtrl($state, $stateParams, VideosModel) {
-        let videosListCtrl = this;
-        VideosModel.getVideos()
+    .controller('DetailsCtrl', function DetailsCtrl($state, $stateParams, DetailsModel) {
+        let detailsCtrl = this,
+            video;
+
+        DetailsModel.getAllVideos()
             .then(function(result) {
-                videosListCtrl.videos = result;
+                detailsCtrl.videos = result;
+            });
+
+        DetailsModel.getVideo(video)
+            .then(function(result) {
+                detailsCtrl.video = result;
             });
 
         function checkListView() {
             return $state.current.name === 'youtube.videos';
         }
 
-        videosListCtrl.checkListView = checkListView;
+        function returnToVideos() {
+            detailsCtrl.video = undefined;
+
+            $state.go('youtube.videos', {
+
+            });
+        }
+
+        detailsCtrl.checkListView = checkListView;
+        detailsCtrl.returnToVideos = returnToVideos;
     })
 ;

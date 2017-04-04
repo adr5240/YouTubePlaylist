@@ -1,9 +1,9 @@
 <h2 class="listTitle">My YouTube Playlist</h2>
 
 <ul class="videoList">
-    <li class="videoListItem" ng-repeat="video in videosListCtrl.videos">
+    <li class="videoListItem" ng-repeat="video in detailsCtrl.videos">
         <img ui-sref="youtube.videos.details({ videoId:video.contentDetails.videoId })" class="videoThumb"
-             ng-click="videosListCtrl.toggleListView()"
+             ng-click="detailsCtrl.toggleListView()"
              ng-src="{{ video.snippet.thumbnails.high.url }}"
              alt="{{ video.snippet.thumbnails.default.url }}">
 

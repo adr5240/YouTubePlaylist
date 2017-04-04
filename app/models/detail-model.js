@@ -9,14 +9,6 @@ angular.module('youtube.models.details', [
             currentVideo,
             videos;
 
-        function extract(result) {
-            return result;
-        }
-
-        function extractAll(result) {
-            return result.data.items;
-        }
-
         function cacheAllVideos(result) {
             videos = extractAll(result);
             return videos;
@@ -25,6 +17,14 @@ angular.module('youtube.models.details', [
         function cacheVideo(result) {
             currentVideo = extract(result);
             return currentVideo;
+        }
+
+        function extractAll(result) {
+            return result.data.items;
+        }
+
+        function extract(result) {
+            return result;
         }
 
         function findVideo(videoId) {
@@ -43,13 +43,9 @@ angular.module('youtube.models.details', [
                     deferred.resolve(findVideo(videoId));
                 });
             }
-            
+
             return deferred.promise;
         }
-
-        model.getVideo = function () {
-            return (currentVideo) ? $q.when(currentVideo) : getVideoById($stateParams.videoId);
-        };
 
         model.getAllVideos = function() {
             let deferred = $q.defer();
@@ -63,6 +59,10 @@ angular.module('youtube.models.details', [
             }
 
             return deferred.promise;
+        };
+
+        model.getVideo = function () {
+            return (currentVideo) ? $q.when(currentVideo) : getVideoById($stateParams.videoId);
         };
 
         this.getAllVideos();
