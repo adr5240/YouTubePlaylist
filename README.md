@@ -1,4 +1,6 @@
-A short project built using AngularJS. To view, the user must install Node.js, NPM, and http-server.
+A short project built using AngularJS. Using the YouTubeAPI, this app takes in a list of videos and displays them as a playlist. The user may click on any video to be taken to a display page for that video as well as view it within the app.
+
+To view, the user must install Node.js, NPM, and http-server.
 
 To check if this is has been done, type into terminal:
 
