@@ -6,21 +6,13 @@ angular.module('videos', [
             .state('youtube.videos', {
                 url: '/',
                 views: {
-                    'details-tablet@': {
+                    'detailsView@': {
                         controller: 'DetailsCtrl as detailsCtrl',
-                        templateUrl: 'app/list/videoDetail-tablet.tmpl.html'
+                        templateUrl: 'app/list/videoDetail.tmpl.html'
                     },
-                    'details-mobile@': {
+                    'videosView@': {
                         controller: 'DetailsCtrl as detailsCtrl',
-                        templateUrl: 'app/list/videoDetail-mobile.tmpl.html'
-                    },
-                    'videos-mobile@': {
-                        controller: 'DetailsCtrl as detailsCtrl',
-                        templateUrl: 'app/list/videoList-mobile.tmpl.html'
-                    },
-                    'videos-tablet@': {
-                        controller: 'DetailsCtrl as detailsCtrl',
-                        templateUrl: 'app/list/videoList-tablet.tmpl.html'
+                        templateUrl: 'app/list/videoList.tmpl.html'
                     }
                 }
             });
@@ -28,13 +20,9 @@ angular.module('videos', [
             .state('youtube.videos.details', {
                 url: 'videos/:videoId/details',
                 views: {
-                    'details-mobile@': {
+                    'detailsView@': {
                         controller: 'DetailsCtrl as detailsCtrl',
-                        templateUrl: 'app/list/videoDetail-mobile.tmpl.html'
-                    },
-                    'details-tablet@': {
-                        controller: 'DetailsCtrl as detailsCtrl',
-                        templateUrl: 'app/list/videoDetail-tablet.tmpl.html'
+                        templateUrl: 'app/list/videoDetail.tmpl.html'
                     }
                 }
             });

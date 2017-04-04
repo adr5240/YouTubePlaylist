@@ -95,7 +95,6 @@ img.videoThumb {
 
 div.videoListInfo {
     float: left;
-    max-height: 370px;
     max-width: 40%;
     display: inline;
     margin: 10px;
