@@ -40,3 +40,12 @@ body {
     color: #4F534E;
     background-image: url("../img/backround.png");
 }
+
+
+h4.videoTitle {
+    cursor: pointer;
+}
+
+div.container {
+    width: 100%;
+}

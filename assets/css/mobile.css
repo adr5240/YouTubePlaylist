@@ -1,3 +1,63 @@
 /*-----------------------------------------------------*/
 /* Mobile CSS */
 /*-----------------------------------------------------*/
+
+li {
+    padding: 10px;
+    border: 2px solid black;
+    border-bottom-width: 0.5px;
+    border-radius: 10px;
+    margin: 0 0 10px 0;
+}
+
+h2.listTitle {
+    font-size: 16pt;
+    text-align: center;
+    font-weight: 700;
+    padding: 20px;
+    color: #e62117;
+    text-shadow: 2px 2px 2px #000;
+}
+
+li.videoListItem {
+    display: block;
+    background: antiquewhite;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+div.videoListInfo {
+    max-width: 90%;
+    display: block;
+    margin: 10px auto 10px auto;
+}
+
+div.videoDetailInfo {
+    max-width: 80%;
+}
+
+button.back {
+    word-wrap: normal;
+    margin: 10px;
+    background: antiquewhite;
+    color: #7d7d7d;
+    border-radius: 10px;
+}
+
+img.videoThumb {
+    max-width: 90%;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+h6.videoDescription {
+    display: none;
+}
+
+iframe#player {
+    display:block;
+    margin: auto;
+}
